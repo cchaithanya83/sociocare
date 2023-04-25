@@ -1,0 +1,21 @@
+.buttons{
+    margin-top: 20vh ;
+    
+    font-size: 16pt;
+}
+button{
+    width: 20vw;
+    height: 15vh;
+    size: 10vw;
+    font-size: 1.25vw;
+    background: #fef322;
+    color: #0a0707;
+}
+H1{
+color : steelblue;
+padding-top:4vh ;
+font-size: 60pt;
+}
+h3{
+    font-size: 30pt;
+}
