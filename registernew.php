@@ -30,7 +30,7 @@
 			'$Cust_name','$Age','$Email','$Phone','$Toi','$Password')";
 		
 		if(mysqli_query($conn, $sql)){
-			echo "<h3>data stored in a database successfully.
+			echo "<h3>Registration is successful
 				</h3>";
 
 
