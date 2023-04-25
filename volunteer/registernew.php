@@ -24,10 +24,12 @@
 		$Toi= $_REQUEST['toi'];
 		$noh= $_REQUEST['noh'];
 		$Password=$_REQUEST['Password'];
+		$task= "";
+		$progress="";
 		
 		// Performing insert query execution
 		// here our table name is college
-		$sql = "INSERT INTO register VALUES ('$Cust_id','$Cust_name','$Age','$Email','$Phone','$Toi','$noh','$Password')";
+		$sql = "INSERT INTO register VALUES ('$Cust_id','$Cust_name','$Age','$Email','$Phone','$Toi','$noh','$Password','$task','$progress')";
 		
 		if(mysqli_query($conn, $sql)){
 			echo "<h3>Registration is successful

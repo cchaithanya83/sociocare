@@ -27,7 +27,7 @@ while($row=mysqli_fetch_array($result))
 	 
 	if($temp=="1")
 	{
-		header("location:main.php? varname=$Cust_name");
+		header("location:main.php? varname=$Cust_name ");
 	}
 	else
 	{

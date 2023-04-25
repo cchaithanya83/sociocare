@@ -27,9 +27,9 @@ li a{
  li a:hover {
 background-color: #111;
  }
-body{
-background-image: url("https://manavrachna.edu.in/wp-content/uploads/2019/12/socialworker.jpg")
-}
+ body{
+  background-color : linear-gradient(120 deg,red,yellow);
+ }
 .buttons{
     margin-top: 40vh ;
     

@@ -13,6 +13,7 @@ $sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
 $result = $conn->query($sql);
 $conn->close();
 $var_value = $_GET['varname'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -113,8 +114,11 @@ h1{
 				<th>Age</th>
 				<th>Email</th>
 				<th>Phone</th>
+				
 				<th>Area of interest</th>
+				<th>No of hour in week</th>
 				<th>Task</th>
+				<th>progress</th>
 			</tr>
 			<!-- PHP CODE TO FETCH DATA FROM ROWS-->
             <?php // LOOP TILL END OF DATA
@@ -134,7 +138,9 @@ h1{
 				<td><?php echo $rows['Email'];?></td>
 				<td><?php echo $rows['Phone'];?></td>
 				<td><?php echo $rows['Toi'];?></td>
+				<td><?php echo $rows['noh'];?></td>
 				<td><?php echo $rows['task'];?></td>
+				<td><?php echo $rows['progress'];?></td>
 				
 				
 			</tr>

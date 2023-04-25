@@ -95,7 +95,7 @@ body{
 					<input id="toi" name="toi" required="required" type="text" placeholder="Area of interest" />
 				</p>
 				<p> 
-					<input id="noh" name="noh" required="required" type="time" placeholder="No of hours in week" />
+					<input id="noh" name="noh" required="required" type="text" placeholder="No of hours in week" />
 				</p>
 				<p> 
 					<!-- <label for="Password" class="Password" data-icon="p">Password: </label> -->

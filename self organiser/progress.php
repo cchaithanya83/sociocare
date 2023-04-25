@@ -19,7 +19,7 @@ $conn->close();
 
 <head>
 	<meta charset="UTF-8">
-	<title>GFG User Details</title>
+	<title>User Details</title>
 	<!-- CSS FOR STYLING THE PAGE -->
 	<style>
 		table {
@@ -138,8 +138,12 @@ section{
 				<td><?php echo $rows['Phone'];?></td>
 				<td><?php echo $rows['Toi'];?></td>
                 <td><?php echo $rows['task'];?></td>
+                <td><?php echo $rows['progress'];?><a href="progress1.php? varname=<?php echo $rows['Cust_id'] ?>"><input type="submit" value="submit" style="text-align: center; margin-left:20px;"/></a></td>
                 
-                <td><form><input id="Cust_name" name="Cust_name" required="required" type="text" placeholder="<?php echo $rows['progress'];?>"></form></td>
+  
+
+		
+            </form></td>
                 
                 				
 				
