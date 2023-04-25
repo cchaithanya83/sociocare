@@ -34,7 +34,7 @@
 				</h3>";
 
 
-			echo "<a href='custloginin.php'>CLick here to login</a>";
+			echo "<a href='loginhtml.html'>CLick here to login</a>";
 			
 
 			

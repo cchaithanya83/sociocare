@@ -32,11 +32,11 @@
 </head>
 <body>
 		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white">Shady Shipping Agency Ltd</font><img src="logo2.png" alt="logo" style="width:70px;height:50px;">
-  <a href="#news">News</a>
+ <font face="Harlow Solid Italic" size="10px" color="white">Volunteer</font>
+  <a href="#news">Info</a>
   <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-   <a class="active" href="#home">Home</a>
+
+   <a class="active" href="index.html">Home</a>
 </div> <center>
 <form  action="registernew.php" autocomplete="on" method="post"> 
 				<h1> Sign up </h1> 
@@ -62,7 +62,7 @@
 				</p>
 					<p> 
 					
-					<label for="toi" class="toi" data-icon="u">Phone:</label>
+					<label for="toi" class="toi" data-icon="u">Area of interest:</label>
 					<input id="toi" name="toi" required="required" type="text" placeholder="" />
 				</p>
 				<p> 
