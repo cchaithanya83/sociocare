@@ -91,15 +91,18 @@ section{
 	border: black;
 	border-radius: 2vh;
 }
+.org{
+	padding : 4vh;
+	margin-left:50px ;
+}
 	</style>
 </head>
 
 <body>
 		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white">Organiser</font>
+ <font face="Harlow Solid Italic" size="10px" color="white"class="org">Organiser</font>
   <a href="mainpage.php"><-back</a>
   <a href="#contact">Contact</a>
-  <a href="#about">About</a>
    <a class="active" href="../index.html">Home</a>
 </div>  
 

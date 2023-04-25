@@ -22,12 +22,12 @@
 		$Email= $_REQUEST['Email'];
 		$Phone= $_REQUEST['Phone'];
 		$Toi= $_REQUEST['toi'];
+		$noh= $_REQUEST['noh'];
 		$Password=$_REQUEST['Password'];
 		
 		// Performing insert query execution
 		// here our table name is college
-		$sql = "INSERT INTO register VALUES ('$Cust_id',
-			'$Cust_name','$Age','$Email','$Phone','$Toi','$Password')";
+		$sql = "INSERT INTO register VALUES ('$Cust_id','$Cust_name','$Age','$Email','$Phone','$Toi','$noh','$Password')";
 		
 		if(mysqli_query($conn, $sql)){
 			echo "<h3>Registration is successful

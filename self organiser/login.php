@@ -6,13 +6,13 @@ $conn = mysqli_connect("localhost", "root", "", "hack");
 			die("ERROR: Could not connect. "
 				. mysqli_connect_error());
 		}
- $Cust_name="";
+ $org_name="";
  $password="";
  $Password1="";
  $temp=0;
- $Cust_name=$_POST['Cust_name'];
+ $org_name=$_POST['org_name'];
 $password=$_POST['Password'];
-  $query="select password from register where   Cust_name='$Cust_name'";
+  $query="select password from organiser where   org_name='$org_name'";
  $result=$conn->query($query);
 while($row=mysqli_fetch_array($result))
 { 
@@ -27,7 +27,7 @@ while($row=mysqli_fetch_array($result))
 	 
 	if($temp=="1")
 	{
-		header("location:main.php? varname=$Cust_name");
+		header("location:sleforg.php? varname=$org_name");
 	}
 	else
 	{

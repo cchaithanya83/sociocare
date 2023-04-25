@@ -52,16 +52,17 @@ h1{
 }
 body{
 	background-color: #03d3fc ;
-	display: block;
+}
+.org{
+	padding : 4vh;
+	margin-left:50px ;
 }
  		</style>
 </head>
 <body>
 		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white">Volunteer</font>
-  <a href="#news">Info</a>
+ <font face="Harlow Solid Italic" size="10px" color="white" class="org">Volunteer</font>
   <a href="#contact">Contact</a>
-
    <a class="active" href="../index.html">Home</a>
 </div> <center>
 
@@ -92,6 +93,9 @@ body{
 					
 					<!-- <label for="toi" class="toi" data-icon="u">Area of interest:</label> -->
 					<input id="toi" name="toi" required="required" type="text" placeholder="Area of interest" />
+				</p>
+				<p> 
+					<input id="noh" name="noh" required="required" type="time" placeholder="No of hours in week" />
 				</p>
 				<p> 
 					<!-- <label for="Password" class="Password" data-icon="p">Password: </label> -->
