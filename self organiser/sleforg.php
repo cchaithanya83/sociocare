@@ -9,6 +9,7 @@
  			.topnav {
   background-color: #333;
   overflow: hidden;
+  height: 9vh;
 }
 
 .topnav a {
@@ -29,26 +30,37 @@
 }
 
         	.login a {
-  background-color: #04AA6D;
+  background-color: #c1e0f5;
   color: black;
+  padding: 3vh;
+  border-radius: 4vh;
+}
+body{
+	background-color: #56baed;
+}
+.org{
+	padding : 4vh;
+	margin-left:50px ;
 }
  		</style>
 	</head>
 	<body>
 	<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white">Self organiser</font>
+ <font face="Harlow Solid Italic" size="10px" color="white"class="org">Organiser</font>
   <a href="">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
-   <a class="active" href="#home">Home</a>
+   <a class="active" href="../index.html">Home</a>
 </div> 
 
 <div class="login">
 	<center>
 	<font face="algerian" size="10px" color=white>
-		<h1>Welcome</h1>
+		<h2>Welcome</h2>
 
 			<a href="volenteer.php">View Volunteer</a><br><br>
+			<a href="task.php">Add task</a><br><br>
+			<a href="progress.php">Volunteer progress </a>
 
 	
 	</div>

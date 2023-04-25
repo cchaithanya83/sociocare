@@ -62,7 +62,7 @@ body{
   <a href="#news">Info</a>
   <a href="#contact">Contact</a>
 
-   <a class="active" href="index.html">Home</a>
+   <a class="active" href="../index.html">Home</a>
 </div> <center>
 
 <form  action="registernew.php" autocomplete="on" method="post">

@@ -12,15 +12,14 @@
 $sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
 $result = $conn->query($sql);
 $conn->close();
+$var_value = $_GET['varname'];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>GFG User Details</title>
-	<!-- CSS FOR STYLING THE PAGE -->
-	<style>
+	<title>Add task</title>
+    <style>
 		table {
 			margin: 0 auto;
 			font-size: large;
@@ -29,7 +28,7 @@ $conn->close();
 
 		h1 {
 			text-align: center;
-			color: white;
+			color: black;
 			font-size: xx-large;
 			font-family: 'Gill Sans', 'Gill Sans MT',
 			' Calibri', 'Trebuchet MS', 'sans-serif';
@@ -81,39 +80,30 @@ $conn->close();
   color: white;
 }
 body{
-	background-color: #56baed;
+	background-image: url("https://images.pexels.com/photos/3704989/pexels-photo-3704989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
-.org{
-	padding : 4vh;
-	margin-left:50px ;
+h1{
+	color: white;
+	text-align: center;
 }
-.tb{
-	border: 1px;
-	border-color: black;
-}	
-th{
-	border-radius:12% ;
-}
-td{
-	border-radius: 12%;
+.task{
+	width :480px;
 }
 	</style>
 </head>
 
-<body>
-		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white"class="org">Organiser</font>
+<body>   
+	
+<div class="topnav">
+ <font face="Harlow Solid Italic" size="10px" color="white">Organiser</font>
   <a href="mainpage.php"><-back</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
    <a class="active" href="../index.html">Home</a>
 </div>  
-<center>
-	<p style="color:white"><h1>Volunteer Info</h1></p>
-	<section>
-		
 		<!-- TABLE CONSTRUCTION-->
-		<table class="tb">
+        <p ><h1>Volunteer Info</h1></p>
+		<table>
 			<tr>
 				<th>Vol_id</th>
 				<th>Vol_name</th>
@@ -123,10 +113,14 @@ td{
 				<th>Area of interest</th>
 			</tr>
 			<!-- PHP CODE TO FETCH DATA FROM ROWS-->
-			<?php // LOOP TILL END OF DATA
+            <?php // LOOP TILL END OF DATA
 				while($rows=$result->fetch_assoc())
 				{
+                    if($rows['Cust_id']==$var_value){
+
+                    
 			?>
+
 			<tr>
 				<!--FETCHING DATA FROM EACH
 					ROW OF EVERY COLUMN-->
@@ -141,10 +135,24 @@ td{
 				
 			</tr>
 			<?php
-				}
+                    }}
 			?>
-		</table>
-	</section>
+        </table>
+
+      
+	<center><h1 style="padding-left: 0vw;color:white;"> Task Assignment </h1> 
+    <form  action="taskadd.php? varname=<?php echo $var_value ?>" autocomplete="on" method="post">   
+
+
+     <p class="task"> 
+         
+         <input id="task" name="task" required="required" type="text" placeholder="Enter Task"/>
+     </p>
+     </p>
+     <p class="button"> 
+         <input type="submit" value="task" style="text-align: center;"/> 
+		
+	</center>
 </body>
 
 </html>

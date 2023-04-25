@@ -1,0 +1,44 @@
+<?php
+
+		$conn = mysqli_connect("localhost", "root", "", "hack");
+		
+		// Check connection
+		if($conn === false){
+			die("ERROR: Could not connect. "
+				. mysqli_connect_error());
+		}
+
+// SQL query to select data from database
+$sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
+$result = $conn->query($sql);
+$conn->close();
+?><?php
+$var_value = $_GET['varname'];
+
+$conn = mysqli_connect("localhost", "root", "", "hack");
+
+// Check connection
+if($conn === false){
+    die("ERROR: Could not connect. "
+        . mysqli_connect_error());
+}
+
+$new_task=readline("Enter the task");
+readline_add_history($new_task);
+
+
+$sql = "UPDATE register SET Task = '$new_task' WHERE Cust_id = $var_value";
+
+// Execute the query
+if(mysqli_query($conn, $sql)){
+    echo "<h3>Task added successfully
+        </h3>";			
+} else{
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
+}
+
+
+// Close connection
+mysqli_close($conn);
+?>

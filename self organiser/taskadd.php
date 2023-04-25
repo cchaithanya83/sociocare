@@ -1,4 +1,5 @@
 <?php
+       
 
 		$conn = mysqli_connect("localhost", "root", "", "hack");
 		
@@ -7,20 +8,20 @@
 			die("ERROR: Could not connect. "
 				. mysqli_connect_error());
 		}
+    
+		$task=$_REQUEST['task'];
+        
 
-// SQL query to select data from database
-$sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
-$result = $conn->query($sql);
-$conn->close();
-?>
+        $sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
+       
+        ?>
+        
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>GFG User Details</title>
-	<!-- CSS FOR STYLING THE PAGE -->
-	<style>
+	<title>Customer</title>
+    <style>
 		table {
 			margin: 0 auto;
 			font-size: large;
@@ -80,71 +81,45 @@ $conn->close();
   background-color: #04AA6D;
   color: white;
 }
+.task{
+    margin-top: 5vh;
+}
 body{
-	background-color: #56baed;
-}
-.org{
-	padding : 4vh;
-	margin-left:50px ;
-}
-.tb{
-	border: 1px;
-	border-color: black;
-}	
-th{
-	border-radius:12% ;
-}
-td{
-	border-radius: 12%;
+	background-image: url("https://images.pexels.com/photos/4068379/pexels-photo-4068379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 	</style>
 </head>
 
 <body>
-		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white"class="org">Organiser</font>
+<div class="topnav">
+ <font face="Harlow Solid Italic" size="10px" color="white">Organiser</font>
   <a href="mainpage.php"><-back</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
    <a class="active" href="../index.html">Home</a>
 </div>  
-<center>
-	<p style="color:white"><h1>Volunteer Info</h1></p>
-	<section>
-		
-		<!-- TABLE CONSTRUCTION-->
-		<table class="tb">
-			<tr>
-				<th>Vol_id</th>
-				<th>Vol_name</th>
-				<th>Age</th>
-				<th>Email</th>
-				<th>Phone</th>
-				<th>Area of interest</th>
-			</tr>
-			<!-- PHP CODE TO FETCH DATA FROM ROWS-->
-			<?php // LOOP TILL END OF DATA
-				while($rows=$result->fetch_assoc())
-				{
-			?>
-			<tr>
-				<!--FETCHING DATA FROM EACH
-					ROW OF EVERY COLUMN-->
-				<td><?php echo $rows['Cust_id'];?></td>
-				<td><?php echo $rows['Cust_name'];?></td>
-				<td><?php echo $rows['Age'];?></td>
-				<td><?php echo $rows['Email'];?></td>
-				<td><?php echo $rows['Phone'];?></td>
-				<td><?php echo $rows['Toi'];?></td>
-				
-				
-				
-			</tr>
-			<?php
-				}
-			?>
-		</table>
-	</section>
+	<center>
+
+
+    <?php
+$var_value = $_GET['varname'];
+
+$sql = "UPDATE register SET Task = '$task' WHERE Cust_id = $var_value";
+
+// Execute the query
+if(mysqli_query($conn, $sql)){
+    echo 'span style ="color: #AFA;">task added successfully</span>';			
+} else{
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
+}
+
+
+// Close connection
+mysqli_close($conn);
+?>
+
+	</center>
 </body>
 
 </html>

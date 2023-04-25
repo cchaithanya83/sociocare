@@ -12,6 +12,7 @@
 $sql = "SELECT * FROM register ORDER BY Cust_id ASC ";
 $result = $conn->query($sql);
 $conn->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,40 +81,35 @@ $conn->close();
   background-color: #04AA6D;
   color: white;
 }
+.task{
+    margin-top: 5vh;
+}
 body{
-	background-color: #56baed;
+	background-image: url("https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
-.org{
-	padding : 4vh;
-	margin-left:50px ;
-}
-.tb{
-	border: 1px;
-	border-color: black;
-}	
-th{
-	border-radius:12% ;
-}
-td{
-	border-radius: 12%;
+section{
+	border: black;
+	border-radius: 2vh;
 }
 	</style>
 </head>
 
 <body>
 		<div class="topnav">
- <font face="Harlow Solid Italic" size="10px" color="white"class="org">Organiser</font>
+ <font face="Harlow Solid Italic" size="10px" color="white">Organiser</font>
   <a href="mainpage.php"><-back</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
    <a class="active" href="../index.html">Home</a>
 </div>  
+
 <center>
-	<p style="color:white"><h1>Volunteer Info</h1></p>
+
+	<p style="color:white"><u><h1>Volunteer Info</h1></u></p>
 	<section>
 		
 		<!-- TABLE CONSTRUCTION-->
-		<table class="tb">
+		<table>
 			<tr>
 				<th>Vol_id</th>
 				<th>Vol_name</th>
@@ -121,6 +117,7 @@ td{
 				<th>Email</th>
 				<th>Phone</th>
 				<th>Area of interest</th>
+                <th>Task</th>
 			</tr>
 			<!-- PHP CODE TO FETCH DATA FROM ROWS-->
 			<?php // LOOP TILL END OF DATA
@@ -136,8 +133,8 @@ td{
 				<td><?php echo $rows['Email'];?></td>
 				<td><?php echo $rows['Phone'];?></td>
 				<td><?php echo $rows['Toi'];?></td>
-				
-				
+                <td><?php echo $rows['task'];?></td>
+                <td><a href="add.php? varname=<?php echo $rows['Cust_id'] ?>"><button> Add Task</button></a></td>				
 				
 			</tr>
 			<?php
