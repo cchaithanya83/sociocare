@@ -1,5 +1,37 @@
+ul {
+    background-color: #110f0f;
+    list-style-type: none;
+    margin : 0;
+    padding : 0;
+    width: 15%;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    left: 80%;
+  }
+  a{
+    display : block;
+    padding: 8px;
+    
+  }
+  li{
+    float : left;
+  }
+li a{
+    display: block;
+    color :white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ li a:hover {
+background-color: #111;
+ }
+body{
+background-image: url("https://manavrachna.edu.in/wp-content/uploads/2019/12/socialworker.jpg")
+}
 .buttons{
-    margin-top: 20vh ;
+    margin-top: 40vh ;
     
     font-size: 16pt;
 }
@@ -8,10 +40,14 @@ button{
     height: 15vh;
     size: 10vw;
     font-size: 1.25vw;
-    background: #fef322;
+    background: #dd2f0c;
     color: #0a0707;
+    box-shadow: none;
+    border-radius: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 H1{
+    margin-top: 0vh;
 color : steelblue;
 padding-top:4vh ;
 font-size: 60pt;
