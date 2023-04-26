@@ -62,7 +62,7 @@ body{
 <body>
 		<div class="topnav">
  <font face="Harlow Solid Italic" size="10px" color="white" class="org">Volunteer</font>
-  <a href="#contact">Contact</a>
+  <a href="../contactus/index.html">Contact</a>
    <a class="active" href="../index.html">Home</a>
 </div> <center>
 
