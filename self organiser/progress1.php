@@ -74,13 +74,13 @@ $var_value = $_GET['varname'];
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+}body{
+  background-color: rgb(207, 169, 169); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(178, 186, 234));
+ }
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
-}
-body{
-	background-image: url("https://images.pexels.com/photos/3704989/pexels-photo-3704989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 h1{
 	color: white;

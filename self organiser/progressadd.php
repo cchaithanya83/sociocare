@@ -85,8 +85,9 @@
     margin-top: 5vh;
 }
 body{
-	background-image: url("https://images.pexels.com/photos/4068379/pexels-photo-4068379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
+  background-color: rgb(207, 169, 169); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(178, 186, 234));
+ }
 .org{
 	padding : 4vh;
 	margin-left:50px ;

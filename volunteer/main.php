@@ -81,8 +81,9 @@ $var_value = $_GET['varname'];
   color: white;
 }
 body{
-	background-image: url("https://images.pexels.com/photos/3704989/pexels-photo-3704989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
+  background-color: rgb(207, 169, 169); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(178, 186, 234));
+ }
 h1{
 	color: white;
 	text-align: center;
@@ -106,7 +107,7 @@ h1{
    <a class="active" href="../index.html">Home</a>
 </div>  
 		<!-- TABLE CONSTRUCTION-->
-        <p ><h1>Volunteer Info</h1></p>
+        <p ><h1>Volunteer Dasboard</h1></p>
 		<table>
 			<tr>
 				<th>Vol_id</th>

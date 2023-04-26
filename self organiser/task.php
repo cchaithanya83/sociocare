@@ -85,8 +85,9 @@ $conn->close();
     margin-top: 5vh;
 }
 body{
-	background-image: url("https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
+  background-color: rgb(207, 169, 169); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(178, 186, 234));
+ }
 section{
 	border: black;
 	border-radius: 2vh;
